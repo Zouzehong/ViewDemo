@@ -44,7 +44,6 @@ class CircleProgressBar @JvmOverloads constructor(
         textPaint.textAlign = Paint.Align.CENTER
         textPaint.isAntiAlias = true
 
-        textPaint.getTextBounds("100%", 0, "100%".length, bounds)
 
         parser.recycle()
     }
@@ -76,6 +75,7 @@ class CircleProgressBar @JvmOverloads constructor(
     override fun onDraw(canvas: Canvas?) {
         //这里targetProgress必须用float类型，不然就是整除运算结果为0
         val angle = (progress / targetProgress) * 360
+        textPaint.getTextBounds("$progress", 0, "$progress".length, bounds)
         //中点坐标等于两点坐标相加除2，所以是(bounds.top + bounds.bottom) / 2
         val offSet = (bounds.top + bounds.bottom) / 2
         canvas?.let {
