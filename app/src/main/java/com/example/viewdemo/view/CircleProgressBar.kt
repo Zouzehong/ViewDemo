@@ -96,4 +96,9 @@ class CircleProgressBar @JvmOverloads constructor(
         radius = (width - arcPaint.strokeWidth) / 2
         textPaint.textSize = width * 0.15F
     }
+
+    fun reset() {
+        progress = 0
+        invalidate()
+    }
 }

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">ViewDemo</string>
-    <string name="bubble_content">Cash Out</string>
     <string name="bubble_confirm">OK</string>
     <string name="earn_cash">Earn Cash</string>
     <string name="reset">Reset</string>
+    <string name="bubble_text">"This is a picture"</string>
 </resources>
